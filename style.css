@@ -4,7 +4,7 @@ body {
   margin: 0;
   background: #0a192f;
   color: #ccd6f6;
-  padding-top: 90px; /* Adjust if your header height changes */
+  padding-top: 10px; /* Adjust if your header height changes */
 }
 
 header {
@@ -84,9 +84,37 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 3rem;
   padding: 4rem 3rem 2rem 3rem;
-  background: linear-gradient(90deg, #0a192f 70%, #112240 100%);
   min-height: 60vh;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-title-image {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title-image img {
+  width: 100%;
+  height: 100%;
+  max-width: 950px;
+  max-height: 900px;
+  object-fit: cover;
+  object-position: center 100%; /* Shift image up a bit to crop top and bottom evenly */
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  background: none;
+  display: block;
+  /* Add diagonal left edge */
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .hero-content {
