@@ -3,36 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>Andrew Copley | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Andrew Copley</h1>
-    <p class="tagline">Web Developer & Project Builder</p>
+  <header class="main-header">
+    <div class="nav-brand"></div>
     <nav>
-      <a href="#projects">Projects</a>
+      <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
+      <a href="#projects">Portfolio</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Andrew Copley</span></h1>
+      <h2 class="subtitle">Front-end Developer</h2>
+      <p>
+        I build modern, responsive websites and web apps.<br>
+        I am passionate about clean code and great user experiences.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary">Hire Me</a>
+        <a href="#contact" class="btn secondary">Want to Chat?</a>
+      </div>
+      <div class="hero-social">
+        <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" /></a>
+        <a href="#" aria-label="GitHub"><img src="images/github.svg" alt="GitHub" /></a>
+        <a href="#" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" /></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/profile.png" alt="Andrew Copley" />
+    </div>
+  </section>
   <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a high spirited creator with experience in front-end web development. I love building user-friendly interfaces and ensuring a seamless user experience. In my free time I enjoy reading romance novels, crocheting stuffed animals, and playing the guitar. I can't resist a good project, so feel free to reach out.</p>
+    </section>
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects-grid">
         <!-- Example project card -->
         <div class="project-card">
-          <img src="../images/project1.png" alt="Project 1 Screenshot" />
-          <h3>Project Title</h3>
-          <p>Short description of the project.</p>
+          <h3>NASA Space Explorer</h3>
+          <img src="../images/NASA Space Explorer.png" alt="Project 1 Screenshot" />
+          <p>This project involved creating a web application that allows users to explore NASA's image and video library. Users can search for specific content, and view a detailed description of each item. The intention of this webpage was to get people excited about space by showing how beautiful it can be.</p>
           <a href="#">View on GitHub</a>
         </div>
         <!-- Add more project cards here -->
+         <div class="project-card">
+          <h3>L'oreal Routine Builder Chat Bot</h3>
+          <img src="../images/L'oreal 2.png" alt="Project 2 Screenshot" />
+          <p>The general idea for this project was to create a chatbot that helps users build their skincare routines using L'oreal products. The user could select the products they wanted to use, and the chatbot would provide personalized recommendations based on their skin type and concerns.</p>
+          <a href="#">View on GitHub</a>
+        </div>
       </div>
-    </section>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Write a short bio about yourself, your skills, and experience.</p>
     </section>
     <section id="contact">
       <h2>Contact</h2>
@@ -41,7 +69,7 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <p>&copy; 2025 Andrew Copley</p>
   </footer>
 </body>
 </html>
