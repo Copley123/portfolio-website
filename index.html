@@ -19,7 +19,7 @@
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>Hi, I'm <span class="highlight">Andrew Copley</span></h1>
-      <h2 class="subtitle">Front-end Developer</h2>
+      <h2 class="subtitle">Front-end Web Developer</h2>
       <p>
         I build modern, responsive websites and web apps.<br>
         I am passionate about clean code and great user experiences.
@@ -29,13 +29,13 @@
         <a href="#contact" class="btn secondary">Want to Chat?</a>
       </div>
       <div class="hero-social">
-        <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter" /></a>
-        <a href="#" aria-label="GitHub"><img src="images/github.svg" alt="GitHub" /></a>
-        <a href="#" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn" /></a>
+        <img src="images/gmail-logo.png" alt="Gmail" />
+        <img src="images/github-logo.png" alt="GitHub" />
+        <img src="images/linkedin-logo-2.png" alt="LinkedIn" />
       </div>
     </div>
     <div class="hero-image">
-      <img src="images/profile.png" alt="Andrew Copley" />
+      <!--<img src="images/profile.png" alt="Andrew Copley" />-->
     </div>
   </section>
   <main>
@@ -76,11 +76,42 @@
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:cmc4star@gmail.com">cmc4star@gmail.com</a></p>
+      <p>Github: <a href="https://github.com/copley123">github.com/copley123</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/copley0001">www.linkedin.com/in/copley0001</a></p>
+      <h3>Let me know if you have any questions. </h3>
       <!-- Or add a simple contact form here -->
     </section>
   </main>
   <footer>
     <p>&copy; 2025 Andrew Copley</p>
   </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = [
+    {id: "home", nav: "Home"},
+    {id: "about", nav: "About"},
+    {id: "projects", nav: "Portfolio"},
+    {id: "contact", nav: "Contact"}
+  ];
+  const navLinks = Array.from(document.querySelectorAll("nav a"));
+
+  function activateNav() {
+    let scrollPos = window.scrollY + 120; // Offset for fixed header
+    let activeId = sections[0].id;
+    for (const section of sections) {
+      const el = document.getElementById(section.id);
+      if (el && el.offsetTop <= scrollPos) {
+        activeId = section.id;
+      }
+    }
+    navLinks.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === "#" + activeId);
+    });
+  }
+
+  window.addEventListener("scroll", activateNav);
+  activateNav();
+});
+</script>
 </body>
 </html>
